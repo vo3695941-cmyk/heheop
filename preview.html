@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web của tôi</title>
+    <style>
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: auto; }
+    </style>
+</head>
+<body>
+    <!-- Khu vực hiển thị kết quả biên dịch -->
+    <div id="app-root"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy chuỗi mã hóa phía sau dấu chấm hỏi
+            const urlParams = new URLSearchParams(window.location.search);
+            const codeParam = urlParams.get('site');
+
+            if (codeParam) {
+                try {
+                    // Giải mã chuỗi Base64 thành mã nguồn HTML gốc
+                    const decodedCode = decodeURIComponent(escape(atob(codeParam)));
+                    
+                    // Khởi tạo và ghi trực tiếp vào trang để trình duyệt biên dịch
+                    document.getElementById("app-root").innerHTML = decodedCode;
+                    
+                    // Thực thi các đoạn thẻ <script> nếu người dùng có viết js bên trong code mẫu
+                    const scripts = document.getElementById("app-root").querySelectorAll("script");
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement("script");
+                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                } catch (e) {
+                    document.body.innerHTML = "<h3 style='color:red; text-align:center; margin-top:50px;'>Lỗi giải mã giao diện trang web!</h3>";
+                }
+            } else {
+                document.body.innerHTML = "<h3 style='text-align:center; margin-top:50px;'>Trang web trống hoặc link không hợp lệ.</h3>";
+            }
+        });
+    </script>
+</body>
+</html>
