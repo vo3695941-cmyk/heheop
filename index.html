@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Hub - Tự Làm Website Miễn Phí</title>
+    <style>
+        /* Giao diện Dark Mode công nghệ, hiện đại */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #161b22, #21262d);
+            border-bottom: 1px solid #30363d;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #58a6ff;
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #8b949e;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f0f6fc;
+            font-size: 1.6rem;
+        }
+
+        /* Lưới danh sách công cụ làm web */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: #161b22;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .card:hover {
+            border-color: #58a6ff;
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            color: #58a6ff;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #8b949e;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(56, 139, 253, 0.15);
+            color: #58a6ff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Khung lộ trình các bước */
+        .steps {
+            background: #161b22;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+
+        .step-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #238636;
+        }
+
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-item h4 {
+            font-size: 1.15rem;
+            color: #f0f6fc;
+            margin-bottom: 6px;
+        }
+
+        .step-item p {
+            color: #8b949e;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌐 WebDev Hub</h1>
+        <p>Thư viện tài nguyên hướng dẫn tự thiết kế website từ A đến Z</p>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">Nền Tảng Làm Web Tốt Nhất</h2>
+        <div class="grid">
+            <!-- Công cụ 1 -->
+            <div class="card">
+                <h3>WordPress</h3>
+                <p>Nền tảng phổ biến nhất thế giới chiếm hơn 40% website toàn cầu. Thích hợp làm web tin tức, blog, bán hàng chuyên nghiệp, dễ cài đặt plugin mở rộng.</p>
+                <span class="badge">Đa năng &amp; Phổ biến</span>
+            </div>
+
+            <!-- Công cụ 2 -->
+            <div class="card">
+                <h3>Canva &amp; Wix</h3>
+                <p>Giải pháp tối ưu cho người mới bắt đầu. Chỉ cần chọn mẫu giao diện có sẵn rồi kéo thả chuột hoặc kéo tay trên điện thoại để thay đổi chữ và hình ảnh.</p>
+                <span class="badge">Kéo thả cực dễ</span>
+            </div>
+
+            <!-- Công cụ 3 -->
+            <div class="card">
+                <h3>GitHub Pages</h3>
+                <p>Lưu trữ website tĩnh (HTML/CSS) hoàn toàn miễn phí, không giới hạn băng thông. Rất phù hợp để làm web giới thiệu bản thân hoặc lưu trữ bài tập code.</p>
+                <span class="badge">Miễn phí 100%</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">Lộ Trình Thiết Kế Website Hoàn Chỉnh</h2>
+        <div class="steps">
+            <div class="step-item">
+                <h4>1. Lên ý tưởng và cấu trúc trang (Sitemap)</h4>
+                <p>Xác định trang web của bạn sẽ gồm những mục nào (Trang chủ, Giới thiệu, Sản phẩm, Liên hệ) để chuẩn bị nội dung viết trước ra file Word.</p>
+            </div>
+            <div class="step-item">
+                <h4>2. Đăng ký Tên miền (Domain) và Lưu trữ (Hosting)</h4>
+                <p>Tên miền giống như địa chỉ nhà (ví dụ: google.com), còn hosting giống như mảnh đất để xây nhà. Nếu chưa có kinh phí, bạn có thể tận dụng các hệ thống miễn phí.</p>
+            </div>
+            <div class="step-item">
+                <h4>3. Tiến hành thiết kế giao diện</h4>
+                <p>Chọn một trong các nền tảng gợi ý ở trên. Nếu chọn WordPress thì cài Theme, nếu chọn Canva thì chỉnh template, nếu đam mê code thì dùng HTML/CSS/JS để tự xây dựng.</p>
+            </div>
+            <div class="step-item">
+                <h4>4. Tối ưu hóa hiển thị và SEO</h4>
+                <p>Kiểm tra kỹ xem trang web nhìn trên điện thoại có bị lệch chữ không. Viết tiêu đề, mô tả chuẩn SEO để trang web dễ dàng xuất hiện khi tìm kiếm trên Google.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© Cộng đồng chia sẻ kiến thức làm web miễn phí lưu trữ trên GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
+
