@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebDev Hub - Tự Làm Website Miễn Phí</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <!-- Sửa đường dẫn tương đối để GitHub Pages nhận file CSS chuẩn 100% -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Sửa đường dẫn tương đối và thêm defer để file JS chạy an toàn -->
+    <script src="./script.js" defer></script>
 </head>
 <body>
 
@@ -32,9 +34,9 @@
                 <button class="btn-link" onclick="publishLivePage()">🌐 XUẤT BẢN TRANG WEB</button>
             </div>
             
-            <!-- KHU VỰC HIỂN THỊ LINK SAU KHI XUẤT BẢN -->
+            <!-- KHU VỰC HIỂN THỊ LINK SAU KHU RÚT GỌN -->
             <div id="link-output-area" class="link-box" style="display: none;">
-                <p>🎉 Xuất bản thành công! Đây là đường link trang web độc lập của bạn:</p>
+                <p>🎉 Xuất bản thành công! Đây là đường link trang web ngắn gọn của bạn:</p>
                 <div class="copy-group">
                     <input type="text" id="shareable-link" readonly>
                     <button onclick="copyToClipboard()">Copy Link</button>
