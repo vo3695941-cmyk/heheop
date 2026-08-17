@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebDev Hub - Tự Tạo Link Website</title>
-    <!-- Liên kết tới file CSS tách biệt -->
+    <title>WebDev Hub - Tự Làm Website Miễn Phí</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Liên kết tới file JS tách biệt -->
     <script src="script.js" defer></script>
 </head>
 <body>
 
     <header>
         <h1>🌐 WebDev Hub</h1>
-        <p>Gõ code tạo web và biến thành đường link chia sẻ ngay lập tức!</p>
+        <p>Thư viện tạo trang web tốc độ cao và xuất bản trực tuyến</p>
     </header>
 
     <div class="container">
         
-        <h2 class="section-title">🛠️ Thử Nghiệm &amp; Tạo Link Rút Gọn</h2>
+        <h2 class="section-title">🛠️ Thử Nghiệm &amp; Xuất Bản Độc Lập</h2>
         <div class="editor-wrapper">
-            <p class="editor-title">Sửa code bên dưới:</p>
+            <p class="editor-title">Sửa code bên dưới và bấm Xuất bản:</p>
             
             <textarea id="code-input"><!-- Viết code HTML/CSS của bạn ở đây -->
-<h1 style="color: #ff5722; text-align: center; font-family: sans-serif;">Hello World!</h1>
-<p style="text-align: center; color: #333; font-family: sans-serif;">Trang web này được tạo ra từ một đường link duy nhất đấy bro!</p>
-<button style="display:block; margin:auto; padding:10px 20px; background:#0366d6; color:#fff; border:none; border-radius:5px;" onclick="alert('Chào bro!')">Bấm thử đi</button></textarea>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 40px; text-align: center; border-radius: 10px; font-family: sans-serif;">
+    <h1>Trang Web Cá Nhân Của Tôi 🚀</h1>
+    <p>Đây là trang độc lập được tạo trực tiếp từ điện thoại.</p>
+    <button style="padding: 10px 20px; border: none; border-radius: 5px; background: white; color: #764ba2; font-weight: bold; cursor: pointer;" onclick="alert('Cảm ơn bro đã ghé thăm!')">Bấm Vào Tôi</button>
+</div></textarea>
             
-            <!-- HÀNG NÚT BẤM MỚI -->
             <div class="btn-group">
                 <button class="btn-run" onclick="runCode()">🚀 CHẠY THỬ CODE</button>
-                <button class="btn-link" onclick="generateWebLink()">🔗 TẠO LINK CHIA SẺ</button>
+                <button class="btn-link" onclick="publishLivePage()">🌐 XUẤT BẢN TRANG WEB</button>
             </div>
             
-            <!-- KHU VỰC HIỂN THỊ LINK SAU KHI TẠO -->
+            <!-- KHU VỰC HIỂN THỊ LINK SAU KHI XUẤT BẢN -->
             <div id="link-output-area" class="link-box" style="display: none;">
-                <p>Sao chép link này gửi cho bạn bè nhé bro:</p>
+                <p>🎉 Xuất bản thành công! Đây là đường link trang web độc lập của bạn:</p>
                 <div class="copy-group">
                     <input type="text" id="shareable-link" readonly>
-                    <button onclick="copyToClipboard()">Copy</button>
+                    <button onclick="copyToClipboard()">Copy Link</button>
                 </div>
             </div>
 
-            <p class="output-label">Kết quả hiển thị thực tế:</p>
+            <p class="output-label">Xem trước khung chạy thử:</p>
             <iframe id="code-output"></iframe>
         </div>
 
@@ -54,4 +53,3 @@
 
 </body>
 </html>
-
